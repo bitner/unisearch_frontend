@@ -1,0 +1,102 @@
+<div>
+
+    <style>
+    .label {
+        color: orange;
+    }
+    .label {
+           display: block;
+    }
+    .internal {
+        color: red;
+    }
+    .external {
+        color: blue;
+    }
+    </style>
+
+
+    <form ng-submit="$ctrl.submit()">
+
+        <div>
+            <span class="label">Text Filter</span>
+
+            <text-filter-component
+                text="$ctrl.shared.currentText"
+            >
+                <span class="debug">text-filter-component not loaded</span>
+            </text-filter-component>
+
+            <div class='debug'>
+                <span class='external'>
+                    external=
+                    "{{$ctrl.shared.currentText}}"
+                </span>
+                <span class='external'>
+                    submitted="{{$ctrl.shared.submittedText}}"
+                </div>
+            </div>
+
+        </div>
+
+        <div>
+            <span class="label">Order</span>
+
+            <order-component
+                order="$ctrl.shared.order"
+            >
+                <span class="debug">order-component not loaded</span>
+            </order-component>
+
+            <div class="debug">
+                <span class='external'>
+                    external=
+                    "{{$ctrl.shared.order.value}}"
+                </span>
+            </div>
+
+        </div>
+
+        <div>
+            <span class="label">Pager</span>
+
+            <pager-component
+                page-number="$ctrl.shared.pageNumber"
+             >
+                <span class="debug">pager-component not loaded</span>
+            </pager-component>
+
+            <div class="debug">
+                <span class='external'>
+                    external=
+                    "{{$ctrl.shared.pageNumber}}"
+                    /
+                    "{{$ctrl.shared.pageCount}}"
+                </span>
+            </div>
+        </div>
+
+        <div>
+            <span class="label">Results</span>
+
+            <results-component
+                text-filter="$ctrl.shared.currentText"
+                order="$ctrl.shared.order"
+                results="$ctrl.shared.results"
+                >
+                <span class="debug">results-component not loaded</span>
+            </results-component>
+
+            <div class="debug">
+                <span class='external'>
+                    resultcount={{$ctrl.shared.results.length}}
+                    <span ng-if="$ctrl.shared.results == undefined">
+                        undefined
+                    </span>
+                </span>
+            </div>
+
+        </div>
+
+    </form>
+</div>

@@ -1,0 +1,18 @@
+<div>
+    <ul class="results">
+        <div class="debug internal">
+            internal
+            textFilter="{{$ctrl.textFilter}}"
+            order="{{$ctrl.order.value}}"
+        </div>
+        <li ng-repeat="result in $ctrl.results | filter:$ctrl.textFilter | orderBy:$ctrl.order.value">
+            <ng-include src="'results/result.html'"></ng-include>
+        </li>
+        <div ng-show="$ctrl.results == undefined">
+            No query has been made.
+        </div>
+        <div ng-show="($ctrl.results | filter:$ctrl.textFilter).length == 0">
+            No results for this query.
+        </div>
+    </ul>
+</div>

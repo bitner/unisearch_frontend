@@ -1,0 +1,9 @@
+<div>
+    <select 
+        ng-click="$ctrl.click()"
+        ng-model="$ctrl.order"
+        ng-options="option.label for option in $ctrl.options track by option.value"
+    >
+    </select>
+        <span class='debug internal'>internal="{{$ctrl.order.value}}"</span>
+</div>

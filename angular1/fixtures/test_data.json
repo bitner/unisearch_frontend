@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Wo Ho Te Sen",
+        "age": 4,
+        "snippet": "How are all these things happening at once?"
+    },
+    {
+        "name": "Yargle Blop Bar",
+        "age": 2,
+        "snippet": "Furchtbar"
+    },
+    {
+        "name": "Foo Bar",
+        "age": 3,
+        "snippet": "Baz Bam"
+    }
+]

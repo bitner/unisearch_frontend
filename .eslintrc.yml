@@ -1,0 +1,48 @@
+env:
+    # browsers: window ...
+    # browser: true
+
+    # node: require, module, exports, __dirname ...
+    node: true
+
+    # mocha: describe, it, beforeEach ...
+    mocha: true
+
+globals:
+    # chai
+    assert: false
+
+    # karma-fixture
+    fixture: false
+
+    # angular
+    angular: false
+
+    # angular-mocks
+    inject: false
+
+extends:
+    - eslint:recommended
+    - angular
+
+plugins:
+    - mocha
+    - angular
+
+rules:
+
+  indent:
+    - error
+    - 4
+
+  linebreak-style:
+    - error
+    - unix
+
+  quotes:
+    - error
+    - double
+
+  semi:
+    - error
+    - always
